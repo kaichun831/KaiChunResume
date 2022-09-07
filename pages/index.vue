@@ -3,7 +3,7 @@
     <div class="div-top-cover-container">
       <div class="div-top-cover-under-background">
         <div class="div-text-area">
-          <p>{{ aboutMeContent }}</p>
+          <!-- <p>{{ aboutMeContent }}</p> -->
         </div>
       </div>
       <div class="div-principal-container">
@@ -18,13 +18,26 @@
         ></scroll-principal-widget>
       </div>
     </div>
+    <div>
+      <h1>Work</h1>
+      <work-item-widget
+        v-for="item in worksList"
+        :key="item"
+        :title="item.title"
+        :description="item.description"
+      ></work-item-widget>
+    </div>
+    <div>
+      <h1>Skill</h1>
+    </div>
   </div>
 </template>
 
 <script>
 import ScrollPrincipalWidget from "../components/ScrollPrincipalWidget.vue";
+import WorkItemWidget from "../components/WorkItemWidget.vue";
 export default {
-  components: { ScrollPrincipalWidget },
+  components: { ScrollPrincipalWidget, WorkItemWidget },
   data() {
     return {
       aboutMeContent:
@@ -61,6 +74,10 @@ export default {
           post: "畢委會總幹事",
           content: "",
         },
+      ],
+      worksList: [
+        { title: "迷途狗", description: "This is about 迷途狗" },
+        { title: "迷途狗", description: "This is about 迷途狗" },
       ],
       introduceList: [
         { no: "001", title: "重大經歷" },
