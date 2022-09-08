@@ -21,6 +21,7 @@
   "devDependencies": {
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/google-fonts": "^2.0.0",
+    "@nuxtjs/vuetify": "^1.12.3",
     "fibers": "^5.0.1",
     "node-sass": "^7.0.1",
     "scss": "^0.2.4",
