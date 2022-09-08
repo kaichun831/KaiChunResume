@@ -15,7 +15,7 @@
         <div class="div-top-cover-container">
           <div class="div-top-cover-under-background">
             <div class="div-text-area">
-              <!-- <p>{{ aboutMeContent }}</p> -->
+              <p>{{ aboutMeContent }}</p>
             </div>
           </div>
           <div class="div-principal-container">
@@ -31,7 +31,8 @@
           </div>
         </div>
         <v-col>
-          <h1>Work</h1>
+          <h1>Project</h1>
+          <v-row> </v-row>
           <work-item-widget
             v-for="item in worksList"
             :key="item"
@@ -62,37 +63,37 @@ export default {
       aboutMeContent:
         "　　畢業於嶺東科技大學數位媒體設計系，在校時擔任社團幹部以及畢委會總召，興趣是潛水。四年志願役服役期間踏入了程式設計圈，退伍後隨即進入科技業IOT相關行業歷練，下班後利用時間自學更精深內容及發展彈吉他興趣。",
       principalList: [
-        // {
-        //   startDateTime: "2021/03",
-        //   endDateTime: "",
-        //   company: "承穎科技公司",
-        //   post: "APP ENGINNER",
-        //   content:
-        //     "● 開發「倉儲管理系統」、「派車系統」、「貨態查詢」應用程式  \u000A● 客製客戶需求功能\u000A● 維護現有客戶專案\u000A\u000A※服務知名國內多家知名物流企業。如:宅配通、MOMO、中華郵政等等。以MVVM軟體設計架構進行開法，並主動導入Flutter雙系統平台及提供用戶使用。",
-        // },
-        // {
-        //   startDateTime: "2019/11",
-        //   endDateTime: "2021/02",
-        //   company: "嘉通物聯網科技公司",
-        //   post: "ANDROID ENGINNER  ",
-        //   content:
-        //     "● 開發「睡眠檢測」、「空氣品質檢測」應用程式\u000A● BLT藍芽技術串聯APP即時顯示\u000A● 維護現有客戶專案",
-        // },
-        // {
-        //   startDateTime: "2015/07",
-        //   endDateTime: "2019/10",
-        //   company: "職業軍人",
-        //   post: "飛機修護人員",
-        //   content:
-        //     "● 直升機相關零件維護及修復\u000A● 教學新進官兵飛機維修相關內容\u000A",
-        // },
-        // {
-        //   startDateTime: "2013/06",
-        //   endDateTime: "2015/08",
-        //   company: "嶺東科技大學",
-        //   post: "畢委會總幹事",
-        //   content: "",
-        // },
+        {
+          startDateTime: "2021/03",
+          endDateTime: "NOW",
+          company: "承穎科技公司",
+          post: "APP ENGINNER",
+          content:
+            "● 開發「倉儲管理系統」、「派車系統」、「貨態查詢」應用程式  \u000A● 客製客戶需求功能\u000A● 維護現有客戶專案\u000A\u000A※服務知名國內多家知名物流企業。如:宅配通、MOMO、中華郵政等等。以MVVM軟體設計架構進行開法，並主動導入Flutter雙系統平台及提供用戶使用。",
+        },
+        {
+          startDateTime: "2019/11",
+          endDateTime: "2021/02",
+          company: "嘉通物聯網科技公司",
+          post: "ANDROID ENGINNER  ",
+          content:
+            "● 開發「睡眠檢測」、「空氣品質檢測」應用程式\u000A● BLT藍芽技術串聯APP即時顯示\u000A",
+        },
+        {
+          startDateTime: "2015/07",
+          endDateTime: "2019/10",
+          company: "職業軍人",
+          post: "飛機修護人員",
+          content:
+            "● 直升機相關零件維護及修復\u000A● 教學新進官兵飛機維修相關內容\u000A",
+        },
+        {
+          startDateTime: "2013/06",
+          endDateTime: "2015/08",
+          company: "嶺東科技大學",
+          post: "畢委會總幹事",
+          content: "",
+        },
       ],
       worksList: [
         {
@@ -131,9 +132,9 @@ p {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: rgb(117, 117, 117);
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 60px;
+  font-size: 30px;
 }
 h2 {
   color: white;
@@ -142,6 +143,7 @@ h2 {
 .div-top-cover-container {
   width: 100%;
   background: url("https://as2.ftcdn.net/v2/jpg/02/94/37/55/1000_F_294375555_tpcdo43DC1XFr6kpSv4v4bEsmcY1GgWz.jpg");
+  // background-size: cover;
   position: relative;
   height: 600px;
   .div-top-cover-under-background {
@@ -158,8 +160,8 @@ h2 {
       flex-direction: column;
       height: 100%;
       p {
-        margin-top: 100px;
-        margin-right: 700px;
+        margin-top: 120px;
+        margin-right: 500px;
         width: 600px;
         color: rgb(255, 255, 255);
       }
@@ -167,7 +169,7 @@ h2 {
   }
   .div-principal-container {
     position: absolute;
-    background: #ffffff;
+    background: #ffffffb4;
     right: 120px;
     width: 35%;
     height: 600px;
