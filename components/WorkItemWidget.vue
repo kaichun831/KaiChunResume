@@ -11,10 +11,15 @@
             max-height="100"
             >mdi-donkey</v-icon
           >
-          <p style="font-size: 50px">{{ title }}</p>
-          <v-btn x-small style="margin-left: 10px">MORE</v-btn>
+          <p style="font-size: 50px">{{ act["title"] }}</p>
+          <v-btn
+            x-small
+            style="margin-left: 10px"
+            @click="routerToPage(act['id'])"
+            >MORE</v-btn
+          >
         </v-row>
-        <p class="description">{{ description }}</p>
+        <p class="description">{{ act["description"] }}</p>
       </v-col>
       <v-img
         style="margin-right: 20px"
@@ -29,9 +34,16 @@
 
 <script>
 export default {
+  /**
+   * {id:String,title:String,description:String}
+   */
   props: {
-    title: String,
-    description: String,
+    act: Object,
+  },
+  methods: {
+    routerToPage(id) {
+      this.$router.push("/project/" + id);
+    },
   },
 };
 </script>

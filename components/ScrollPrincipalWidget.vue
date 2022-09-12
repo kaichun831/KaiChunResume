@@ -32,7 +32,7 @@ export default {
 p {
   white-space: pre-wrap;
   font-size: 12px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .box-hr {
   height: 10px;

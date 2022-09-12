@@ -21,7 +21,7 @@
           <div class="div-principal-container">
             <scroll-principal-widget
               v-for="principal in principalList"
-              :key="principal"
+              :key="principal['id']"
               :title="principal['post']"
               :startDateTime="principal['startDateTime']"
               :endDateTime="principal['endDateTime']"
@@ -30,18 +30,36 @@
             ></scroll-principal-widget>
           </div>
         </div>
+        <h1>Specialty</h1>
         <v-col>
-          <h1>Project</h1>
-          <v-row> </v-row>
-          <work-item-widget
-            v-for="item in worksList"
-            :key="item"
-            :title="item.title"
-            :description="item.description"
-          ></work-item-widget>
-          <h1>Skill</h1>
+          <v-card
+            color="rgba(255, 255, 255)"
+            style="padding: 20px; margin: 10px"
+          >
+            <h3>{{ spcialtyTitle }}</h3>
+            <p>{{ spcialtyContent }}</p>
+          </v-card>
         </v-col>
-
+        <h1>Project</h1>
+        <v-col>
+          <work-item-widget
+            :act="worksList[projectSeletedIndexStart]"
+          ></work-item-widget>
+          <work-item-widget
+            :act="worksList[projectSeletedIndexStart]"
+            v-if="projectSeletedIndexStart + 1 < worksList.length"
+          ></work-item-widget>
+          <work-item-widget
+            :act="worksList[projectSeletedIndexStart]"
+            v-if="projectSeletedIndexStart + 2 < worksList.length"
+          ></work-item-widget>
+        </v-col>
+        <v-pagination
+          v-model="projectSeletedPage"
+          :length="getProjectLength()"
+        ></v-pagination>
+        <!-- <h1>Hobby</h1> -->
+        <image-wall></image-wall>
         <!-- If using vue-router -->
         <router-view></router-view>
       </v-container>
@@ -54,16 +72,23 @@
 </template>
 
 <script>
+import ImageWall from "../components/ImageWall.vue";
 import ScrollPrincipalWidget from "../components/ScrollPrincipalWidget.vue";
 import WorkItemWidget from "../components/WorkItemWidget.vue";
 export default {
-  components: { ScrollPrincipalWidget, WorkItemWidget },
+  components: { ScrollPrincipalWidget, WorkItemWidget, ImageWall },
   data() {
     return {
+      projectSeletedPage: 1,
+      projectSeletedIndexStart: 0,
+      spcialtyTitle: "擅長於ANDROID原生APP及跨平台FLUTTER開發",
+      spcialtyContent:
+        "\u000A★ Android Architecture MVVM / Databinding / JetPack / ReactiveX / Java/ Kotlin / UnitTest \u000A★ Flutter Architecture GetX ★ CI/CD Jenkins \u000A★ Version Control Git \u000A★ Project Mangement Redmine",
       aboutMeContent:
         "　　畢業於嶺東科技大學數位媒體設計系，在校時擔任社團幹部以及畢委會總召，興趣是潛水。四年志願役服役期間踏入了程式設計圈，退伍後隨即進入科技業IOT相關行業歷練，下班後利用時間自學更精深內容及發展彈吉他興趣。",
       principalList: [
         {
+          id: "001",
           startDateTime: "2021/03",
           endDateTime: "NOW",
           company: "承穎科技公司",
@@ -72,6 +97,7 @@ export default {
             "● 開發「倉儲管理系統」、「派車系統」、「貨態查詢」應用程式  \u000A● 客製客戶需求功能\u000A● 維護現有客戶專案\u000A\u000A※服務知名國內多家知名物流企業。如:宅配通、MOMO、中華郵政等等。以MVVM軟體設計架構進行開法，並主動導入Flutter雙系統平台及提供用戶使用。",
         },
         {
+          id: "002",
           startDateTime: "2019/11",
           endDateTime: "2021/02",
           company: "嘉通物聯網科技公司",
@@ -80,6 +106,7 @@ export default {
             "● 開發「睡眠檢測」、「空氣品質檢測」應用程式\u000A● BLT藍芽技術串聯APP即時顯示\u000A",
         },
         {
+          id: "003",
           startDateTime: "2015/07",
           endDateTime: "2019/10",
           company: "職業軍人",
@@ -88,6 +115,7 @@ export default {
             "● 直升機相關零件維護及修復\u000A● 教學新進官兵飛機維修相關內容\u000A",
         },
         {
+          id: "004",
           startDateTime: "2013/06",
           endDateTime: "2015/08",
           company: "嶺東科技大學",
@@ -97,11 +125,25 @@ export default {
       ],
       worksList: [
         {
+          id: "001",
           title: "Title",
           description:
             "This is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about Wo",
         },
         {
+          id: "002",
+          title: "Title",
+          description:
+            "This is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about Wo",
+        },
+        {
+          id: "003",
+          title: "Title",
+          description:
+            "This is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about Wo",
+        },
+        {
+          id: "004",
           title: "Title",
           description:
             "This is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about Wo",
@@ -114,6 +156,28 @@ export default {
       ],
     };
   },
+  methods: {
+    //專案作品顯示個數
+    getProjectLength() {
+      let count = 3;
+      if (this.worksList.length % count == 0) {
+        return Number.parseInt(this.worksList.length / count);
+      } else {
+        return Number.parseInt(this.worksList.length / count + 1);
+      }
+    },
+  },
+  watch: {
+    projectSeletedPage: {
+      handler(newVal, oldVal) {
+        let count = 3;
+        this.projectSeletedIndexStart = count * (newVal - 1);
+        console.log("Start Index " + this.projectSeletedIndexStart);
+      },
+      immediate: true,
+    },
+  },
+  computed: {},
 };
 </script>
 
