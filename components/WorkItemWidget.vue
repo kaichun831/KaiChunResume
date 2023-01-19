@@ -3,30 +3,37 @@
     <v-row style="padding-left: 30px" align="center">
       <v-col>
         <v-row align="baseline">
-          <v-icon
+          <!-- <v-icon
             x-large
             color="black"
             src="../assets/images/right-arrow.png"
             max-width="100"
             max-height="100"
             >mdi-donkey</v-icon
-          >
-          <p style="font-size: 50px">{{ act["title"] }}</p>
+          > -->
+          <p style="font-size: 50px">{{ title }}</p>
           <v-btn
             x-small
-            style="margin-left: 10px"
-            @click="routerToPage(act['id'])"
+            style="margin-left: 10px; margin-bottom: 20px"
+            @click="routerToPage(id, type, webUrl)"
             >MORE</v-btn
           >
+          <div>
+            <p>　# {{ type }}</p>
+          </div>
         </v-row>
-        <p class="description">{{ act["description"] }}</p>
+        <p class="description">{{ description }}</p>
       </v-col>
       <v-img
-        style="margin-right: 20px"
-        src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        max-width="400"
-        max-height="150"
-        aspect-ratio="1.7778"
+        style="
+          margin: 10px 30px 10px 10px;
+          border-radius: 12px;
+          box-shadow: -1px 0 3px 3px rgba(0, 0, 0, 0.1);
+        "
+        :src="picPath"
+        max-width="200"
+        max-height="200"
+        aspect-ratio="1"
       />
     </v-row>
   </v-card>
@@ -38,11 +45,25 @@ export default {
    * {id:String,title:String,description:String}
    */
   props: {
-    act: Object,
+    id: String,
+    title: String,
+    type: String,
+    picPath: String,
+    description: String,
+    webUrl: String,
+  },
+  data() {
+    return {
+      bgPicPath: this.picPath,
+    };
   },
   methods: {
-    routerToPage(id) {
-      this.$router.push("/project/" + id);
+    routerToPage(id, type, webUrl) {
+      if (type == "APP") {
+        this.$router.push("/project/" + id);
+      } else {
+        window.open(webUrl);
+      }
     },
   },
 };
@@ -51,56 +72,6 @@ export default {
 .card-style {
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.work-box {
-  display: flex;
-  height: 350px;
-  width: 100%;
-
-  .work-box-left {
-    width: 80%;
-    padding-left: 10%;
-    padding-top: 30px;
-    position: relative;
-    .content {
-      display: flex;
-      align-items: center;
-      .title-icon {
-        width: 15px;
-        height: 15px;
-        rotate: -45deg;
-      }
-      .title-text {
-        padding-left: 5px;
-        font-size: 30px;
-      }
-    }
-    .description {
-      font-size: 20px;
-      padding-top: 15px;
-    }
-    .div-more {
-      width: 120px;
-      text-align: center;
-      background: #7c7c7c;
-      position: absolute;
-      right: 50px;
-      bottom: 50px;
-      p {
-        font-size: 25px;
-        font-family: "Times New Roman", Times, serif;
-      }
-    }
-  }
-  .work-box-right {
-    text-align: center;
-    padding: 20px;
-    .img-container {
-      width: 600px;
-      height: 300px;
-      background: #7c7c7c;
-      //border-radius: 10px;
-    }
-  }
+  background: v-bind("bgPicPath");
 }
 </style>

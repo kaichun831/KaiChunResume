@@ -1,7 +1,33 @@
 <template>
   <v-app>
-    <v-navigation-drawer app>
-      <!-- -->
+    <v-navigation-drawer app style="background: #ffffff">
+      <v-container align="center">
+        <v-hover>
+          <v-avatar size="180">
+            <v-img
+              src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            ></v-img>
+          </v-avatar>
+        </v-hover>
+        <p style="margin-top: 10px">簡簡單單創造美好生活，熱愛潛水和音樂。</p>
+        <v-divider style="margin-top: -15px; margin-bottom: 20px"></v-divider>
+        <v-row align="center" style="margin-left: 2px">
+          <v-icon style="margin-right: 10px">mdi-cellphone</v-icon>
+          <p style="font-size: 8px; margin: 0">0968-717579</p>
+        </v-row>
+        <v-row align="center" style="margin-left: 2px">
+          <v-icon style="margin-right: 10px">mdi-email-box</v-icon>
+          <p style="font-size: 8px; margin: 0">kaichun831@gmail.com</p>
+        </v-row>
+        <v-row align="center" style="margin-left: 2px">
+          <v-icon style="margin-right: 10px">mdi-github</v-icon>
+          <a
+            href="https://github.com/kaichun831"
+            style="font-size: 8px; margin: 0"
+            >https://github.com/kaichun831</a
+          >
+        </v-row>
+      </v-container>
     </v-navigation-drawer>
 
     <v-app-bar app>
@@ -43,14 +69,29 @@
         <h1>Project</h1>
         <v-col>
           <work-item-widget
-            :act="worksList[projectSeletedIndexStart]"
+            :id="worksList[projectSeletedIndexStart].id"
+            :title="worksList[projectSeletedIndexStart].title"
+            :type="worksList[projectSeletedIndexStart].type"
+            :picPath="worksList[projectSeletedIndexStart].picPath"
+            :webUrl="worksList[projectSeletedIndexStart].webUrl"
+            :description="worksList[projectSeletedIndexStart].description"
           ></work-item-widget>
           <work-item-widget
-            :act="worksList[projectSeletedIndexStart]"
+            :id="worksList[projectSeletedIndexStart + 1].id"
+            :title="worksList[projectSeletedIndexStart + 1].title"
+            :type="worksList[projectSeletedIndexStart + 1].type"
+            :picPath="worksList[projectSeletedIndexStart + 1].picPath"
+            :webUrl="worksList[projectSeletedIndexStart + 1].webUrl"
+            :description="worksList[projectSeletedIndexStart + 1].description"
             v-if="projectSeletedIndexStart + 1 < worksList.length"
           ></work-item-widget>
           <work-item-widget
-            :act="worksList[projectSeletedIndexStart]"
+            :id="worksList[projectSeletedIndexStart + 2].id"
+            :title="worksList[projectSeletedIndexStart + 2].title"
+            :type="worksList[projectSeletedIndexStart + 2].type"
+            :picPath="worksList[projectSeletedIndexStart + 2].picPath"
+            :webUrl="worksList[projectSeletedIndexStart + 2].webUrl"
+            :description="worksList[projectSeletedIndexStart + 2].description"
             v-if="projectSeletedIndexStart + 2 < worksList.length"
           ></work-item-widget>
         </v-col>
@@ -59,7 +100,7 @@
           :length="getProjectLength()"
         ></v-pagination>
         <!-- <h1>Hobby</h1> -->
-        <image-wall></image-wall>
+        <!-- <image-wall></image-wall> -->
         <!-- If using vue-router -->
         <router-view></router-view>
       </v-container>
@@ -83,7 +124,7 @@ export default {
       projectSeletedIndexStart: 0,
       spcialtyTitle: "擅長於ANDROID原生APP及跨平台FLUTTER開發",
       spcialtyContent:
-        "\u000A★ Android Architecture MVVM / Databinding / JetPack / ReactiveX / Java/ Kotlin / UnitTest \u000A★ Flutter Architecture GetX ★ CI/CD Jenkins \u000A★ Version Control Git \u000A★ Project Mangement Redmine",
+        "\u000A★ Android Architecture MVVM / Databinding / JetPack / ReactiveX / Java/ Kotlin / UnitTest / Coroutine \u000A★ Flutter Architecture GetX \u000A★ CI/CD Jenkins \u000A★ Version Control Git \u000A★ Project Mangement Redmine",
       aboutMeContent:
         "　　畢業於嶺東科技大學數位媒體設計系，在校時擔任社團幹部以及畢委會總召，興趣是潛水。四年志願役服役期間踏入了程式設計圈，退伍後隨即進入科技業IOT相關行業歷練，下班後利用時間自學更精深內容及發展彈吉他興趣。",
       principalList: [
@@ -126,27 +167,64 @@ export default {
       worksList: [
         {
           id: "001",
-          title: "Title",
+          type: "APP",
+          title: "迷途狗",
+          webUrl: "",
+          picPath: "https://i.imgur.com/9hXYeXG.png",
           description:
-            "This is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about Wo",
+            "2020為了方便家人，因此誕生了圖像記錄通訊錄，希望在這方面能夠幫到更多人。",
         },
         {
           id: "002",
-          title: "Title",
+          type: "APP",
+          title: "中華郵政",
+          webUrl: "",
+          picPath: "https://i.imgur.com/lHDVbB5.png",
           description:
-            "This is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about Wo",
+            "提供中華郵政內部倉儲作業人員使用，方便處理倉儲相關入庫、出庫、盤點等等功能。",
         },
         {
           id: "003",
-          title: "Title",
+          type: "APP",
+          title: "承穎派車系統",
+          webUrl: "",
+          picPath: "https://i.imgur.com/LF1zkEh.png",
           description:
-            "This is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about Wo",
+            "提供貨運人員使用，在管理訂單配達等等能有效的提供即時狀態回報，包含照片上傳、客戶簽名、客戶約配、單據查詢等等。",
         },
         {
           id: "004",
-          title: "Title",
+          type: "APP",
+          title: "承穎貨態查詢系統",
+          webUrl: "",
+          picPath: "https://i.imgur.com/Sl7VCsM.png",
           description:
-            "This is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about WoThis is about Wo",
+            "提供多倉進行查詢系統即時狀態，同時可以查詢庫存異動資料。",
+        },
+        {
+          id: "005",
+          type: "APP",
+          title: "承穎倉儲系統",
+          webUrl: "",
+          picPath: "https://i.imgur.com/X4UF8l4.png",
+          description:
+            "全新開發倉儲系統(公版)，優化效能、畫面重新安排，使倉儲工作變得簡單。",
+        },
+        {
+          id: "006",
+          type: "WEB",
+          title: "旺來蓁展蛋捲",
+          webUrl: "https://walai.com.tw/",
+          picPath: "https://i.imgur.com/mDEXaNl.png",
+          description: "協助店家製作商業網站。",
+        },
+        {
+          id: "007",
+          type: "WEB",
+          title: "鼎耀國際供應鏈有限公司",
+          webUrl: "https://dynergicsupplyinc.com/",
+          picPath: "https://i.imgur.com/Tkq4HFe.png",
+          description: "協助店家製作商業網站。",
         },
       ],
       introduceList: [
