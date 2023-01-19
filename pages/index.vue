@@ -161,7 +161,7 @@ export default {
           endDateTime: "2015/08",
           company: "嶺東科技大學",
           post: "畢委會總幹事",
-          content: "",
+          content: "● 策畫系會參展事宜  \u000A● 協調它系舉辦日程\u000A",
         },
       ],
       worksList: [
@@ -250,7 +250,7 @@ export default {
       handler(newVal, oldVal) {
         let count = 3;
         this.projectSeletedIndexStart = count * (newVal - 1);
-        console.log("Start Index " + this.projectSeletedIndexStart);
+        // console.log("Start Index " + this.projectSeletedIndexStart);
       },
       immediate: true,
     },

@@ -1,5 +1,5 @@
 <template>
-  <v-card class="card-style">
+  <v-card :style="cardStyle">
     <v-row style="padding-left: 30px" align="center">
       <v-col>
         <v-row align="baseline">
@@ -15,7 +15,7 @@
           <v-btn
             x-small
             style="margin-left: 10px; margin-bottom: 20px"
-            @click="routerToPage(id, type, webUrl)"
+            @click="routerToPage()"
             >MORE</v-btn
           >
           <div>
@@ -25,12 +25,9 @@
         <p class="description">{{ description }}</p>
       </v-col>
       <v-img
-        style="
-          margin: 10px 30px 10px 10px;
-          border-radius: 12px;
-          box-shadow: -1px 0 3px 3px rgba(0, 0, 0, 0.1);
-        "
+        class="icon-type"
         :src="picPath"
+        @click="routerToPage()"
         max-width="200"
         max-height="200"
         aspect-ratio="1"
@@ -54,24 +51,39 @@ export default {
   },
   data() {
     return {
-      bgPicPath: this.picPath,
+      cardStyle: {
+        marginTop: 20 + "px",
+        marginBottom: 20 + "px",
+        background: "#cccccc",
+      },
     };
   },
   methods: {
-    routerToPage(id, type, webUrl) {
-      if (type == "APP") {
-        this.$router.push("/project/" + id);
+    routerToPage() {
+      if (this.type == "APP") {
+        this.$router.push({
+          path: "/project/" + this.title,
+          params: {
+            id: this.id,
+            title: this.title,
+            type: this.type,
+            picPath: this.picPath,
+            description: this.description,
+            webUrl: this.webUrl,
+          },
+        });
       } else {
-        window.open(webUrl);
+        window.open(this.webUrl);
       }
     },
   },
 };
 </script>
 <style lang="scss" >
-.card-style {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background: v-bind("bgPicPath");
+.icon-type {
+  margin: 10px 30px 10px 10px;
+  border-radius: 12px;
+  box-shadow: -1px 0 3px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 </style>

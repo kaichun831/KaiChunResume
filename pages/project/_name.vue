@@ -12,8 +12,8 @@
     <v-row class="div-content" justify="center">
       <v-col class="div-text-area">
         <v-card style="height: 100%">
-          <v-card-title> Title </v-card-title>
-          <v-card-text>{{ paramID }}</v-card-text>
+          <v-card-title> {{ title }} </v-card-title>
+          <v-card-text>{{}}</v-card-text>
         </v-card>
       </v-col>
       <v-col class="div-img-area">
@@ -49,10 +49,12 @@ const gradients = [
 const exhale = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export default {
   data() {
+    console.log(this.$route.params);
     return {
       checking: false,
       heartbeats: [],
-      paramID: this.$route.params.id,
+      title: this.$route.params.name,
+
       items: [
         {
           src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
@@ -86,10 +88,6 @@ export default {
     width: 100%;
     bottom: 20%;
     z-index: 1;
-    .div-text-area {
-    }
-    .div-img-area {
-    }
   }
   .div-grey {
     height: 100%;
