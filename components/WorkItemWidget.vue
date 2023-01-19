@@ -50,11 +50,15 @@ export default {
     webUrl: String,
   },
   data() {
+    console.log(this.picPath);
     return {
       cardStyle: {
         marginTop: 20 + "px",
         marginBottom: 20 + "px",
-        background: "#cccccc",
+        backgroundImage: "url(" + this.picPath + ")",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "top",
+        backgroundSize: "cover",
       },
     };
   },
