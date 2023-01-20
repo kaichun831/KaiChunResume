@@ -1,6 +1,6 @@
 <template>
   <v-card :style="cardStyle">
-    <v-row style="padding-left: 30px" align="center">
+    <v-row :style="rowStyle">
       <v-col>
         <v-row align="baseline">
           <!-- <v-icon
@@ -18,9 +18,18 @@
             @click="routerToPage()"
             >MORE</v-btn
           >
-          <div>
-            <p>　# {{ type }}</p>
-          </div>
+          <v-chip
+            :color="chipStyle.app"
+            :style="{ marginLeft: 10 + 'px', color: 'white' }"
+            v-if="type === 'APP'"
+            >{{ type }}</v-chip
+          >
+          <v-chip
+            :color="chipStyle.web"
+            :style="{ marginLeft: 10 + 'px', color: 'white' }"
+            v-else
+            >{{ type }}</v-chip
+          >
         </v-row>
         <p class="description">{{ description }}</p>
       </v-col>
@@ -48,6 +57,7 @@ export default {
     picPath: String,
     description: String,
     webUrl: String,
+    screenShot: Array,
   },
   data() {
     console.log(this.picPath);
@@ -55,10 +65,14 @@ export default {
       cardStyle: {
         marginTop: 20 + "px",
         marginBottom: 20 + "px",
-        backgroundImage: "url(" + this.picPath + ")",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "top",
-        backgroundSize: "cover",
+      },
+      rowStyle: {
+        paddingLeft: 30 + "px",
+        align: "center",
+      },
+      chipStyle: {
+        app: "#85D039",
+        web: "#0055A7",
       },
     };
   },
@@ -67,13 +81,14 @@ export default {
       if (this.type == "APP") {
         this.$router.push({
           path: "/project/" + this.title,
-          params: {
+          query: {
             id: this.id,
             title: this.title,
             type: this.type,
             picPath: this.picPath,
             description: this.description,
             webUrl: this.webUrl,
+            screen: this.screenShot,
           },
         });
       } else {
@@ -83,7 +98,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" >
+<style lang="scss">
 .icon-type {
   margin: 10px 30px 10px 10px;
   border-radius: 12px;

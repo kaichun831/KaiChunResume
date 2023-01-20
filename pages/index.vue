@@ -75,6 +75,7 @@
             :picPath="worksList[projectSeletedIndexStart].picPath"
             :webUrl="worksList[projectSeletedIndexStart].webUrl"
             :description="worksList[projectSeletedIndexStart].description"
+            :scrennShot="word"
           ></work-item-widget>
           <work-item-widget
             :id="worksList[projectSeletedIndexStart + 1].id"
@@ -173,6 +174,14 @@ export default {
           picPath: "https://i.imgur.com/9hXYeXG.png",
           description:
             "2020為了方便家人，因此誕生了圖像記錄通訊錄，希望在這方面能夠幫到更多人。",
+          screenshot: [
+            "https://i.imgur.com/qu59buZ.png",
+            "https://i.imgur.com/otilftA.png",
+            "https://i.imgur.com/H92MTVt.png",
+            "https://i.imgur.com/RE5RytO.png",
+            "https://i.imgur.com/XwSf5R2.png",
+            "https://i.imgur.com/SwW9ham.png",
+          ],
         },
         {
           id: "002",
@@ -182,6 +191,14 @@ export default {
           picPath: "https://i.imgur.com/lHDVbB5.png",
           description:
             "提供中華郵政內部倉儲作業人員使用，方便處理倉儲相關入庫、出庫、盤點等等功能。",
+          screenshot: [
+            "https://i.imgur.com/qu59buZ.png",
+            "https://i.imgur.com/otilftA.png",
+            "https://i.imgur.com/H92MTVt.png",
+            "https://i.imgur.com/RE5RytO.png",
+            "https://i.imgur.com/XwSf5R2.png",
+            "https://i.imgur.com/SwW9ham.png",
+          ],
         },
         {
           id: "003",
@@ -191,6 +208,14 @@ export default {
           picPath: "https://i.imgur.com/LF1zkEh.png",
           description:
             "提供貨運人員使用，在管理訂單配達等等能有效的提供即時狀態回報，包含照片上傳、客戶簽名、客戶約配、單據查詢等等。",
+          screenshot: [
+            "https://i.imgur.com/qu59buZ.png",
+            "https://i.imgur.com/otilftA.png",
+            "https://i.imgur.com/H92MTVt.png",
+            "https://i.imgur.com/RE5RytO.png",
+            "https://i.imgur.com/XwSf5R2.png",
+            "https://i.imgur.com/SwW9ham.png",
+          ],
         },
         {
           id: "004",
@@ -200,6 +225,14 @@ export default {
           picPath: "https://i.imgur.com/Sl7VCsM.png",
           description:
             "提供多倉進行查詢系統即時狀態，同時可以查詢庫存異動資料。",
+          screenshot: [
+            "https://i.imgur.com/qu59buZ.png",
+            "https://i.imgur.com/otilftA.png",
+            "https://i.imgur.com/H92MTVt.png",
+            "https://i.imgur.com/RE5RytO.png",
+            "https://i.imgur.com/XwSf5R2.png",
+            "https://i.imgur.com/SwW9ham.png",
+          ],
         },
         {
           id: "005",
@@ -209,6 +242,14 @@ export default {
           picPath: "https://i.imgur.com/X4UF8l4.png",
           description:
             "全新開發倉儲系統(公版)，優化效能、畫面重新安排，使倉儲工作變得簡單。",
+          screenshot: [
+            "https://i.imgur.com/qu59buZ.png",
+            "https://i.imgur.com/otilftA.png",
+            "https://i.imgur.com/H92MTVt.png",
+            "https://i.imgur.com/RE5RytO.png",
+            "https://i.imgur.com/XwSf5R2.png",
+            "https://i.imgur.com/SwW9ham.png",
+          ],
         },
         {
           id: "006",
@@ -217,6 +258,7 @@ export default {
           webUrl: "https://walai.com.tw/",
           picPath: "https://i.imgur.com/mDEXaNl.png",
           description: "協助店家製作商業網站。",
+          screenshot: [],
         },
         {
           id: "007",
@@ -225,6 +267,7 @@ export default {
           webUrl: "https://dynergicsupplyinc.com/",
           picPath: "https://i.imgur.com/Tkq4HFe.png",
           description: "協助店家製作商業網站。",
+          screenshot: [],
         },
       ],
       introduceList: [

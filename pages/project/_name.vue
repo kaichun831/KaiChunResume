@@ -1,99 +1,85 @@
 <template>
   <div class="div-container">
-    <!-- <v-carousel class="div-imgWall" height="450" :show-arrows="false">
-      <v-carousel-item
-        v-for="(item, i) in items"
-        :key="i"
-        :src="item.src"
-        reverse-transition="fade-transition"
-        transition="fade-transition"
-      ></v-carousel-item>
-    </v-carousel> -->
-    <v-row class="div-content" justify="center">
-      <v-col class="div-text-area">
-        <v-card style="height: 100%">
-          <v-card-title> {{ title }} </v-card-title>
-          <v-card-text>{{}}</v-card-text>
-        </v-card>
-      </v-col>
-      <v-col class="div-img-area">
-        <v-row>
-          <v-img
-            v-for="i in 9"
-            :key="i"
-            max-width="300"
-            max-height="300"
-            src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-          ></v-img>
-        </v-row>
-      </v-col>
-    </v-row>
-    <v-img
-      class="img-under"
-      style="position: absolute"
-      src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    ></v-img>
-    <div class="div-grey"></div>
+    <v-col>
+      <v-row>
+        <v-container>
+          <v-card>
+            <v-card-title>
+              <v-img
+                class="icon-type"
+                :src="picPath"
+                max-width="100"
+                max-height="100"
+                aspect-ratio="1"
+              ></v-img>
+              <h1 :style="{ fontSize: 50 + 'px' }">{{ title }}</h1>
+            </v-card-title>
+            <v-card-text>{{ description }}</v-card-text>
+          </v-card>
+        </v-container>
+      </v-row>
+      <v-row class="scroll">
+        <v-container>
+          <ul class="img-row">
+            <li v-for="(item, index) in screenshot" :key="index">
+              <v-img
+                class="img-style"
+                :src="screenshot[index]"
+                max-width="275"
+              ></v-img>
+            </li>
+          </ul>
+        </v-container>
+      </v-row>
+    </v-col>
   </div>
 </template>
 
 <script>
-const gradients = [
-  ["#222"],
-  ["#42b3f4"],
-  ["red", "orange", "yellow"],
-  ["purple", "violet"],
-  ["#00c6ff", "#F0F", "#FF0"],
-  ["#f72047", "#ffd200", "#1feaea"],
-];
-const exhale = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export default {
   data() {
-    console.log(this.$route.params);
+    console.log(this.$route.query);
     return {
-      checking: false,
       heartbeats: [],
-      title: this.$route.params.name,
-
-      items: [
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-        },
+      title: this.$route.query.title,
+      picPath: this.$route.query.picPath,
+      description: this.$route.query.description,
+      screenshot: [
+        "https://i.imgur.com/qu59buZ.png",
+        "https://i.imgur.com/otilftA.png",
+        "https://i.imgur.com/H92MTVt.png",
+        "https://i.imgur.com/RE5RytO.png",
+        "https://i.imgur.com/XwSf5R2.png",
+        "https://i.imgur.com/SwW9ham.png",
       ],
     };
   },
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .div-container {
-  height: 100vh;
-  position: relative;
-  .img-under {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  margin: 10px;
+  .icon-type {
+    margin: 10px 30px 10px 10px;
+    border-radius: 12px;
+    box-shadow: -1px 0 3px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
-  .div-content {
-    position: absolute;
-    width: 100%;
-    bottom: 20%;
-    z-index: 1;
-  }
-  .div-grey {
-    height: 100%;
-    opacity: 0.6;
-    z-index: -1;
-    background: #424242;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      margin-left: 5px;
+      margin-right: 5px;
+      .img-style {
+        padding: 5px;
+        margin: 10px 5px 10px 0px;
+        border-radius: 4px;
+        box-shadow: -1px 0 3px 3px rgba(0, 0, 0, 0.1);
+      }
+    }
   }
 }
-</style>>
+</style>
