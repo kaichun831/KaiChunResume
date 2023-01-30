@@ -231,12 +231,14 @@ export default {
           description:
             "提供多倉進行查詢系統即時狀態，同時可以查詢庫存異動資料。",
           screenshot: [
-            "https://i.imgur.com/qu59buZ.png",
-            "https://i.imgur.com/otilftA.png",
-            "https://i.imgur.com/H92MTVt.png",
-            "https://i.imgur.com/RE5RytO.png",
-            "https://i.imgur.com/XwSf5R2.png",
-            "https://i.imgur.com/SwW9ham.png",
+            "https://i.imgur.com/J6LsO2v.png",
+            "https://i.imgur.com/ZbvdVnV.png",
+            "https://i.imgur.com/Alpvq0r.png",
+            "https://i.imgur.com/5W0b0lh.png",
+            "https://i.imgur.com/1yTXhC2.png",
+            "https://i.imgur.com/upMuSKA.png",
+            "https://i.imgur.com/bJY8HlL.png",
+            "https://i.imgur.com/ZyfdxN5.png",
           ],
         },
         {
