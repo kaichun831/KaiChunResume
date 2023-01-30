@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer app style="background: #ffffff">
+    <v-navigation-drawer app style="background: #ffffff" v-model="drawer">
       <v-container align="center">
         <v-hover>
           <v-avatar size="180">
@@ -32,6 +32,7 @@
 
     <v-app-bar app>
       <!-- -->
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
@@ -123,6 +124,7 @@ export default {
   components: { ScrollPrincipalWidget, WorkItemWidget, ImageWall },
   data() {
     return {
+      drawer: true,
       projectSeletedPage: 1,
       projectSeletedIndexStart: 0,
       spcialtyTitle: "擅長於ANDROID原生APP及跨平台FLUTTER開發",
