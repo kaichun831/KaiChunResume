@@ -60,7 +60,7 @@ export default {
     screenshot: Array,
   },
   data() {
-    console.log(this.picPath);
+    // console.log(this.picPath);
     return {
       cardStyle: {
         marginTop: 20 + "px",

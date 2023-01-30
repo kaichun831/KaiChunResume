@@ -1,6 +1,7 @@
 <template>
   <div class="div-container">
     <v-col>
+      <v-icon large color="black" @click="back()">mdi-arrow-left</v-icon>
       <v-row>
         <v-container>
           <v-card>
@@ -46,6 +47,11 @@ export default {
       description: this.$route.query.description,
       screenshot: this.$route.query.screenshot,
     };
+  },
+  methods: {
+    back() {
+      this.$router.back();
+    },
   },
 };
 </script>

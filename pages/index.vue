@@ -1,119 +1,68 @@
 <template>
-  <v-app>
-    <v-navigation-drawer app style="background: #ffffff" v-model="drawer">
-      <v-container align="center">
-        <v-hover>
-          <v-avatar size="180">
-            <v-img
-              src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            ></v-img>
-          </v-avatar>
-        </v-hover>
-        <p style="margin-top: 10px">簡簡單單創造美好生活，熱愛潛水和音樂。</p>
-        <v-divider style="margin-top: -15px; margin-bottom: 20px"></v-divider>
-        <v-row align="center" style="margin-left: 2px">
-          <v-icon style="margin-right: 10px">mdi-cellphone</v-icon>
-          <p style="font-size: 8px; margin: 0">0968-717579</p>
-        </v-row>
-        <v-row align="center" style="margin-left: 2px">
-          <v-icon style="margin-right: 10px">mdi-email-box</v-icon>
-          <p style="font-size: 8px; margin: 0">kaichun831@gmail.com</p>
-        </v-row>
-        <v-row align="center" style="margin-left: 2px">
-          <v-icon style="margin-right: 10px">mdi-github</v-icon>
-          <a
-            href="https://github.com/kaichun831"
-            style="font-size: 8px; margin: 0"
-            >https://github.com/kaichun831</a
-          >
-        </v-row>
-      </v-container>
-    </v-navigation-drawer>
-
-    <v-app-bar app>
-      <!-- -->
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-    </v-app-bar>
-
-    <!-- Sizes your content based upon application components -->
-    <v-main style="background: white">
-      <!-- Provides the application the proper gutter -->
-      <v-container fluid>
-        <div class="div-top-cover-container">
-          <div class="div-top-cover-under-background">
-            <div class="div-text-area">
-              <p>{{ aboutMeContent }}</p>
-            </div>
-          </div>
-          <div class="div-principal-container">
-            <scroll-principal-widget
-              v-for="principal in principalList"
-              :key="principal['id']"
-              :title="principal['post']"
-              :startDateTime="principal['startDateTime']"
-              :endDateTime="principal['endDateTime']"
-              :companyName="principal['company']"
-              :content="principal['content']"
-            ></scroll-principal-widget>
-          </div>
+  <v-container fluid>
+    <div class="div-top-cover-container">
+      <div class="div-top-cover-under-background">
+        <div class="div-text-area">
+          <p>{{ aboutMeContent }}</p>
         </div>
-        <h1>Specialty</h1>
-        <v-col>
-          <v-card
-            color="rgba(255, 255, 255)"
-            style="padding: 20px; margin: 10px"
-          >
-            <h3>{{ spcialtyTitle }}</h3>
-            <p>{{ spcialtyContent }}</p>
-          </v-card>
-        </v-col>
-        <h1>Project</h1>
-        <v-col>
-          <work-item-widget
-            :id="worksList[projectSeletedIndexStart].id"
-            :title="worksList[projectSeletedIndexStart].title"
-            :type="worksList[projectSeletedIndexStart].type"
-            :picPath="worksList[projectSeletedIndexStart].picPath"
-            :webUrl="worksList[projectSeletedIndexStart].webUrl"
-            :description="worksList[projectSeletedIndexStart].description"
-            :screenshot="worksList[projectSeletedIndexStart].screenshot"
-          ></work-item-widget>
-          <work-item-widget
-            :id="worksList[projectSeletedIndexStart + 1].id"
-            :title="worksList[projectSeletedIndexStart + 1].title"
-            :type="worksList[projectSeletedIndexStart + 1].type"
-            :picPath="worksList[projectSeletedIndexStart + 1].picPath"
-            :webUrl="worksList[projectSeletedIndexStart + 1].webUrl"
-            :description="worksList[projectSeletedIndexStart + 1].description"
-            :screenshot="worksList[projectSeletedIndexStart + 1].screenshot"
-            v-if="projectSeletedIndexStart + 1 < worksList.length"
-          ></work-item-widget>
-          <work-item-widget
-            :id="worksList[projectSeletedIndexStart + 2].id"
-            :title="worksList[projectSeletedIndexStart + 2].title"
-            :type="worksList[projectSeletedIndexStart + 2].type"
-            :picPath="worksList[projectSeletedIndexStart + 2].picPath"
-            :webUrl="worksList[projectSeletedIndexStart + 2].webUrl"
-            :description="worksList[projectSeletedIndexStart + 2].description"
-            :screenshot="worksList[projectSeletedIndexStart + 2].screenshot"
-            v-if="projectSeletedIndexStart + 2 < worksList.length"
-          ></work-item-widget>
-        </v-col>
-        <v-pagination
-          v-model="projectSeletedPage"
-          :length="getProjectLength()"
-        ></v-pagination>
-        <!-- <h1>Hobby</h1> -->
-        <!-- <image-wall></image-wall> -->
-        <!-- If using vue-router -->
-        <router-view></router-view>
-      </v-container>
-    </v-main>
-
-    <v-footer app>
-      <!-- -->
-    </v-footer>
-  </v-app>
+      </div>
+      <div class="div-principal-container">
+        <scroll-principal-widget
+          v-for="principal in principalList"
+          :key="principal['id']"
+          :title="principal['post']"
+          :startDateTime="principal['startDateTime']"
+          :endDateTime="principal['endDateTime']"
+          :companyName="principal['company']"
+          :content="principal['content']"
+        ></scroll-principal-widget>
+      </div>
+    </div>
+    <h1>Specialty</h1>
+    <v-col>
+      <v-card color="rgba(255, 255, 255)" style="padding: 20px; margin: 10px">
+        <h3>{{ spcialtyTitle }}</h3>
+        <p>{{ spcialtyContent }}</p>
+      </v-card>
+    </v-col>
+    <h1>Project</h1>
+    <v-col>
+      <work-item-widget
+        :id="worksList[projectSeletedIndexStart].id"
+        :title="worksList[projectSeletedIndexStart].title"
+        :type="worksList[projectSeletedIndexStart].type"
+        :picPath="worksList[projectSeletedIndexStart].picPath"
+        :webUrl="worksList[projectSeletedIndexStart].webUrl"
+        :description="worksList[projectSeletedIndexStart].description"
+        :screenshot="worksList[projectSeletedIndexStart].screenshot"
+      ></work-item-widget>
+      <work-item-widget
+        :id="worksList[projectSeletedIndexStart + 1].id"
+        :title="worksList[projectSeletedIndexStart + 1].title"
+        :type="worksList[projectSeletedIndexStart + 1].type"
+        :picPath="worksList[projectSeletedIndexStart + 1].picPath"
+        :webUrl="worksList[projectSeletedIndexStart + 1].webUrl"
+        :description="worksList[projectSeletedIndexStart + 1].description"
+        :screenshot="worksList[projectSeletedIndexStart + 1].screenshot"
+        v-if="projectSeletedIndexStart + 1 < worksList.length"
+      ></work-item-widget>
+      <work-item-widget
+        :id="worksList[projectSeletedIndexStart + 2].id"
+        :title="worksList[projectSeletedIndexStart + 2].title"
+        :type="worksList[projectSeletedIndexStart + 2].type"
+        :picPath="worksList[projectSeletedIndexStart + 2].picPath"
+        :webUrl="worksList[projectSeletedIndexStart + 2].webUrl"
+        :description="worksList[projectSeletedIndexStart + 2].description"
+        :screenshot="worksList[projectSeletedIndexStart + 2].screenshot"
+        v-if="projectSeletedIndexStart + 2 < worksList.length"
+      ></work-item-widget>
+    </v-col>
+    <v-pagination
+      v-model="projectSeletedPage"
+      :length="getProjectLength()"
+    ></v-pagination>
+    <router-view></router-view>
+  </v-container>
 </template>
 
 <script>
@@ -279,11 +228,6 @@ export default {
           screenshot: [],
         },
       ],
-      introduceList: [
-        { no: "001", title: "重大經歷" },
-        // { no: "002", title: "相關技能" },
-        // { no: "003", title: "程式語言" },
-      ],
     };
   },
   methods: {
@@ -307,7 +251,6 @@ export default {
       immediate: true,
     },
   },
-  computed: {},
 };
 </script>
 

@@ -1,6 +1,5 @@
-require("dotenv").config();
-
 export default {
+  target: 'static',
   head: {
     title: "KAI CHUN CHAN RESUME", //標題
     htmlAttrs: {
@@ -21,15 +20,10 @@ export default {
 
   css: ["@assets/css/main.scss"],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
 
   ],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: ["@nuxtjs/dotenv", "@nuxtjs/google-fonts", '@nuxtjs/vuetify',],
   googleFonts: {
     download: true,
@@ -39,14 +33,11 @@ export default {
       },
     },
   },
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   server: {
-    port: 3000, // default: 3000
+    port: 59976, // default: 3000
     host: 'localhost' // default: localhost
   },
-  publicPath: '/KaiChunResume/dist'
+
 };
