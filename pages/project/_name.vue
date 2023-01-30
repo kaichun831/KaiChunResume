@@ -44,14 +44,7 @@ export default {
       title: this.$route.query.title,
       picPath: this.$route.query.picPath,
       description: this.$route.query.description,
-      screenshot: [
-        "https://i.imgur.com/qu59buZ.png",
-        "https://i.imgur.com/otilftA.png",
-        "https://i.imgur.com/H92MTVt.png",
-        "https://i.imgur.com/RE5RytO.png",
-        "https://i.imgur.com/XwSf5R2.png",
-        "https://i.imgur.com/SwW9ham.png",
-      ],
+      screenshot: this.$route.query.screenshot,
     };
   },
 };

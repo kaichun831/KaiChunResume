@@ -75,7 +75,7 @@
             :picPath="worksList[projectSeletedIndexStart].picPath"
             :webUrl="worksList[projectSeletedIndexStart].webUrl"
             :description="worksList[projectSeletedIndexStart].description"
-            :scrennShot="word"
+            :screenshot="worksList[projectSeletedIndexStart].screenshot"
           ></work-item-widget>
           <work-item-widget
             :id="worksList[projectSeletedIndexStart + 1].id"
@@ -84,6 +84,7 @@
             :picPath="worksList[projectSeletedIndexStart + 1].picPath"
             :webUrl="worksList[projectSeletedIndexStart + 1].webUrl"
             :description="worksList[projectSeletedIndexStart + 1].description"
+            :screenshot="worksList[projectSeletedIndexStart + 1].screenshot"
             v-if="projectSeletedIndexStart + 1 < worksList.length"
           ></work-item-widget>
           <work-item-widget
@@ -93,6 +94,7 @@
             :picPath="worksList[projectSeletedIndexStart + 2].picPath"
             :webUrl="worksList[projectSeletedIndexStart + 2].webUrl"
             :description="worksList[projectSeletedIndexStart + 2].description"
+            :screenshot="worksList[projectSeletedIndexStart + 2].screenshot"
             v-if="projectSeletedIndexStart + 2 < worksList.length"
           ></work-item-widget>
         </v-col>
@@ -243,12 +245,12 @@ export default {
           description:
             "全新開發倉儲系統(公版)，優化效能、畫面重新安排，使倉儲工作變得簡單。",
           screenshot: [
-            "https://i.imgur.com/qu59buZ.png",
-            "https://i.imgur.com/otilftA.png",
-            "https://i.imgur.com/H92MTVt.png",
-            "https://i.imgur.com/RE5RytO.png",
-            "https://i.imgur.com/XwSf5R2.png",
-            "https://i.imgur.com/SwW9ham.png",
+            "https://i.imgur.com/ImATgfW.png",
+            "https://i.imgur.com/9Xax4zF.png",
+            "https://i.imgur.com/cUZhB5t.png",
+            "https://i.imgur.com/GVjLD8r.png",
+            "https://i.imgur.com/aaaPEHK.png",
+            "https://i.imgur.com/7mfrydU.png",
           ],
         },
         {

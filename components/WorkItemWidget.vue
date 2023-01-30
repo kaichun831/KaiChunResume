@@ -57,7 +57,7 @@ export default {
     picPath: String,
     description: String,
     webUrl: String,
-    screenShot: Array,
+    screenshot: Array,
   },
   data() {
     console.log(this.picPath);
@@ -88,7 +88,7 @@ export default {
             picPath: this.picPath,
             description: this.description,
             webUrl: this.webUrl,
-            screen: this.screenShot,
+            screenshot: this.screenshot,
           },
         });
       } else {
