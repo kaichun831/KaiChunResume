@@ -194,12 +194,13 @@ export default {
           description:
             "提供中華郵政內部倉儲作業人員使用，方便處理倉儲相關入庫、出庫、盤點等等功能。",
           screenshot: [
-            "https://i.imgur.com/qu59buZ.png",
-            "https://i.imgur.com/otilftA.png",
-            "https://i.imgur.com/H92MTVt.png",
-            "https://i.imgur.com/RE5RytO.png",
-            "https://i.imgur.com/XwSf5R2.png",
-            "https://i.imgur.com/SwW9ham.png",
+            "https://i.imgur.com/YJjVWAI.png",
+            "https://i.imgur.com/r1hZGKN.png",
+            "https://i.imgur.com/6YyXhJ2.png",
+            "https://i.imgur.com/8Hdpd7q.png",
+            "https://i.imgur.com/Hwf6lXk.png",
+            "https://i.imgur.com/6LDqrgr.png",
+            "https://i.imgur.com/NS67mgk.png",
           ],
         },
         {
@@ -211,12 +212,14 @@ export default {
           description:
             "提供貨運人員使用，在管理訂單配達等等能有效的提供即時狀態回報，包含照片上傳、客戶簽名、客戶約配、單據查詢等等。",
           screenshot: [
-            "https://i.imgur.com/qu59buZ.png",
-            "https://i.imgur.com/otilftA.png",
-            "https://i.imgur.com/H92MTVt.png",
-            "https://i.imgur.com/RE5RytO.png",
-            "https://i.imgur.com/XwSf5R2.png",
-            "https://i.imgur.com/SwW9ham.png",
+            "https://i.imgur.com/X5lXPNm.png",
+            "https://i.imgur.com/Q0KvrL7.png",
+            "https://i.imgur.com/AL05D2K.png",
+            "https://i.imgur.com/6XzWeje.png",
+            "https://i.imgur.com/nQMU1I6.png",
+            "https://i.imgur.com/137wvLA.png",
+            "https://i.imgur.com/ZyAtEti.png",
+            "https://i.imgur.com/rwTf1KO.png",
           ],
         },
         {

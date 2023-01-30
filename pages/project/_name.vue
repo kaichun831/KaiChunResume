@@ -63,11 +63,13 @@ export default {
   ul {
     display: flex;
     flex-wrap: wrap;
+
     li {
       margin-left: 5px;
       margin-right: 5px;
+      list-style-type: none;
       .img-style {
-        padding: 5px;
+        // padding: -15px;
         margin: 10px 5px 10px 0px;
         border-radius: 4px;
         box-shadow: -1px 0 3px 3px rgba(0, 0, 0, 0.1);
