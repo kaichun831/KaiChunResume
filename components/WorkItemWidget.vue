@@ -65,6 +65,7 @@ export default {
       cardStyle: {
         marginTop: 20 + "px",
         marginBottom: 20 + "px",
+        background: "#FFFFFF",
       },
       rowStyle: {
         paddingLeft: 30 + "px",

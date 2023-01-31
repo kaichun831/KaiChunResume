@@ -15,7 +15,17 @@
               ></v-img>
               <h1 :style="{ fontSize: 50 + 'px' }">{{ title }}</h1>
             </v-card-title>
-            <v-card-text>{{ description }}</v-card-text>
+            <v-col>
+              <v-card-text>{{ description }}</v-card-text>
+              <a
+                style="margin-left: 15px"
+                :href="webUrl"
+                v-if="webUrl != ''"
+                name="迷途狗PlayStore網址"
+                target="_blank"
+                >前往下載</a
+              >
+            </v-col>
           </v-card>
         </v-container>
       </v-row>
@@ -43,6 +53,7 @@ export default {
     return {
       heartbeats: [],
       title: this.$route.query.title,
+      webUrl: this.$route.query.webUrl,
       picPath: this.$route.query.picPath,
       description: this.$route.query.description,
       screenshot: this.$route.query.screenshot,

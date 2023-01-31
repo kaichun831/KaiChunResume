@@ -123,10 +123,11 @@ export default {
           id: "001",
           type: "APP",
           title: "迷途狗",
-          webUrl: "",
+          webUrl:
+            "https://play.google.com/store/apps/details?id=com.dylanwalkha.asuscomm.app.twudingmap&hl=zh-TW",
           picPath: "https://i.imgur.com/9hXYeXG.png",
           description:
-            "2020為了方便家人，因此誕生了圖像記錄通訊錄，希望在這方面能夠幫到更多人。",
+            "為了方便家人，因此誕生了圖像記錄通訊錄，希望在這方面能夠幫到更多人。\n\n 2020已上架於Android PlayStore ",
           screenshot: [
             "https://i.imgur.com/qu59buZ.png",
             "https://i.imgur.com/otilftA.png",
@@ -158,10 +159,11 @@ export default {
           id: "003",
           type: "APP",
           title: "承穎派車系統",
-          webUrl: "",
+          webUrl:
+            "https://apps.apple.com/tw/app/%E6%89%BF%E7%A9%8E%E6%B4%BE%E8%BB%8A%E7%B3%BB%E7%B5%B1/id1622515145",
           picPath: "https://i.imgur.com/LF1zkEh.png",
           description:
-            "提供貨運人員使用，在管理訂單配達等等能有效的提供即時狀態回報，包含照片上傳、客戶簽名、客戶約配、單據查詢等等。",
+            "提供貨運人員使用，在管理訂單配達等等能有效的提供即時狀態回報，包含照片上傳、客戶簽名、客戶約配、單據查詢等等。\n\n 2022已上架於IOS AppStore",
           screenshot: [
             "https://i.imgur.com/X5lXPNm.png",
             "https://i.imgur.com/Q0KvrL7.png",
@@ -279,15 +281,16 @@ h2 {
 }
 .div-top-cover-container {
   width: 100%;
-  background: url("https://as2.ftcdn.net/v2/jpg/02/94/37/55/1000_F_294375555_tpcdo43DC1XFr6kpSv4v4bEsmcY1GgWz.jpg");
-  // background-size: cover;
+  // background: url("https://as2.ftcdn.net/v2/jpg/02/94/37/55/1000_F_294375555_tpcdo43DC1XFr6kpSv4v4bEsmcY1GgWz.jpg");
+  background-image: url("../assets/images/index_background.jpg");
+  background-size: cover;
   position: relative;
   height: 600px;
   .div-top-cover-under-background {
     white-space: pre-wrap;
     position: absolute;
     height: 200px;
-    background: #a0a0a07e;
+    background: #6666667e;
     bottom: 0;
     width: 100%;
     .div-text-area {
@@ -301,6 +304,7 @@ h2 {
         margin-right: 500px;
         width: 600px;
         color: rgb(255, 255, 255);
+        font-size: 14px;
       }
     }
   }
