@@ -1,10 +1,10 @@
 ---
 title: KG簡歷
 tags: 作品介紹、工作經歷、工作接洽
-description: 
+description: 個人履歷介紹
 
 ---
-[TOC]
+
 
 # KG聯絡資訊
 - Author : KAI-CHUN,CHAN (詹凱鈞)
@@ -24,4 +24,6 @@ description:
 - Web
     - [旺來蓁展蛋捲](https://walai.com.tw)
     - [鼎耀國際供應鏈有限公司](https://dynergicsupplyinc.com/)
+
+# 作品ICON
 <img src="https://i.imgur.com/9hXYeXG.png" alt="迷途狗" width="150" height="150"><img src="https://i.imgur.com/LF1zkEh.png" alt="承穎派車系統" width="150" height="150"><img src="https://i.imgur.com/X4UF8l4.png" alt="承穎倉儲系統" width="150" height="150"><img src="https://i.imgur.com/Sl7VCsM.png" alt="承穎貨態系統" width="150" height="150"><img src="https://i.imgur.com/lHDVbB5.png" alt="中華郵政倉儲系統" width="150" height="150"><img src="https://i.imgur.com/mDEXaNl.png" alt="旺來蓁展蛋捲" width="150" height="150"><img src="https://i.imgur.com/Tkq4HFe.png" alt="鼎耀國際供應鏈有限公司" width="150" height="150">
