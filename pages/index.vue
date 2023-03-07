@@ -34,7 +34,7 @@
                     v-for="item in worksList"
                     :key="item.id"
                   >
-                    <a :href="item.link">
+                    <a :href="item.link" class="item-link">
                       <img :src="item.picPath" class="item-img" />
                       <h3>{{ item.title }}</h3>
                     </a>
@@ -343,6 +343,13 @@ $left-container-background-color: rgba(255, 255, 255, 0.5);
                 margin: 3px;
                 text-align: center;
                 width: 24%;
+                .item-link {
+                  color: rgb(73, 68, 68);
+                  text-decoration: none;
+                  &:hover {
+                    color: rgb(26, 117, 236);
+                  }
+                }
                 .item-img {
                   width: 100%;
                   height: auto;
@@ -351,9 +358,6 @@ $left-container-background-color: rgba(255, 255, 255, 0.5);
                   border: 1px solid rgba(255, 255, 255, 0.5);
                   border-radius: 4px;
                   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-                }
-                &:hover {
-                  cursor: pointer;
                 }
               }
             }
