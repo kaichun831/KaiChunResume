@@ -94,7 +94,7 @@ export default {
           startDateTime: "2021/03",
           endDateTime: "NOW",
           company: "承穎科技公司",
-          post: "APP ENGINNER",
+          post: "APP ENGINEER",
           content:
             "● 開發「倉儲管理系統」、「派車系統」、「貨態查詢」應用程式 \n● 客製客戶需求功能\n● 維護現有客戶專案\n\n※服務國內多家知名物流企業。如:宅配通、MOMO、中華郵政等等。以MVVM軟體設計架構進行開發，並主動導入Flutter雙系統平台及提供用戶使用。",
         },
@@ -103,7 +103,7 @@ export default {
           startDateTime: "2019/11",
           endDateTime: "2021/02",
           company: "嘉通物聯網科技公司",
-          post: "ANDROID ENGINNER  ",
+          post: "ANDROID ENGINEER  ",
           content:
             "● 開發「睡眠檢測」、「空氣品質檢測」應用程式\u000A● BLT藍芽技術串聯APP即時顯示\u000A",
         },
