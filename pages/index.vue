@@ -436,4 +436,30 @@ $left-container-background-color: rgba(255, 255, 255, 0.5);
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  #main {
+    .div-main-container {
+      .main-block {
+        .content-view {
+          width: 100%;
+          .card-bg-style {
+            .project-wrap {
+              .project-item-container {
+                .project-item {
+                  margin: 3px;
+                  text-align: center;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+        .div-principal-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 </style>
