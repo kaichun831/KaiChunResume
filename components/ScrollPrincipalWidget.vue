@@ -35,7 +35,7 @@ p {
   font-family: "OpenFenYuan";
   white-space: nowrap;
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: wheat;
 }
