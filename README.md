@@ -7,10 +7,10 @@ description:
 [TOC]
 
 # KG聯絡資訊
-Author : KAI-CHUN,CHAN (詹凱鈞)
-Birthday : 1993/08/31
-Email : kaichun831@gmail.com
-Github : https://github.com/kaichun831
+- Author : KAI-CHUN,CHAN (詹凱鈞)
+- Birthday : 1993/08/31
+- Email : kaichun831@gmail.com
+- Github : https://github.com/kaichun831
 
 
 # 作品清單
