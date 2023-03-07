@@ -12,6 +12,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '半路出家工程師，透過自學而開啟一場工程師生涯。' },
+      { hid: 'og:image', name: 'og:image', content: 'https://i.imgur.com/ArfYYvz.jpg' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/KG.ico' }
