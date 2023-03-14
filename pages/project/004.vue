@@ -6,9 +6,9 @@
         <div style="margin-top: 20px; margin-left: 20px">
           <h1>{{ title }}</h1>
           <p>{{ description }}</p>
-          <!-- <div class="more-container">
+          <div class="more-container">
             <a :href="webUrl" class="link-style" target="_blank">前往連結</a>
-          </div> -->
+          </div>
         </div>
       </div>
     </card-widget-vue>
@@ -36,7 +36,8 @@ export default {
       type: "APP",
       title: "承穎貨態查詢系統",
       link: "./project/004",
-      webUrl: "",
+      webUrl:
+        "https://apps.apple.com/tw/app/%E6%89%BF%E7%A9%8E%E8%B2%A8%E6%85%8B%E7%B3%BB%E7%B5%B1/id1673628631",
       picPath: "https://i.imgur.com/Sl7VCsM.png",
       description: "提供多倉進行查詢系統即時狀態，同時可以查詢庫存異動資料。",
       screenshot: [
