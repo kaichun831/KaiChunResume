@@ -20,13 +20,37 @@
           <!--左側區塊介紹 -->
           <div class="content-view">
             <card-widget-vue class="card-bg-style">
-              <h2>Special</h2>
+              <h2>職責</h2>
               <section>
                 <card-widget-vue>
-                  <p>{{ spcialtyContent }}</p>
+                  <p>{{ responseibility }}</p>
                 </card-widget-vue>
               </section>
-              <h2>Project</h2>
+              <h2>技術工具</h2>
+              <section>
+                <card-widget-vue>
+                  <div
+                    v-for="item in spcialtyContent"
+                    :key="item"
+                    style="padding: 3px"
+                  >
+                    <!-- <h3 style="font-size: 18px; font-family: 'Lora', serif">
+                      {{ item.title }}
+                    </h3> -->
+                    <p>
+                      <span
+                        style="
+                          font-size: 18px;
+                          font-family: 'Lora', serif;
+                          font-weight: bold;
+                        "
+                        >{{ item.title }} : </span
+                      >{{ item.content }}
+                    </p>
+                  </div>
+                </card-widget-vue>
+              </section>
+              <h2>作品集與相關連結</h2>
               <section class="project-wrap">
                 <div class="project-item-container">
                   <card-widget-vue
@@ -62,7 +86,7 @@
       <div class="div-bottom-container">
         <div>
           <ul>
-            <li>/ 客製APP / 網頁建置 / 媒合設計 / 媒合攝影 /</li>
+            <li>/ 客製APP / 網頁建置 / 媒合設計 / 媒合攝影 / 廣告投放 /</li>
             <li style="font-size: 30px">歡迎洽詢</li>
             <li>/ 0968-717-579 /</li>
             <li>/ kaichun831@gmail.com /</li>
@@ -84,9 +108,19 @@ export default {
       drawer: true,
       projectSeletedPage: 1,
       projectSeletedIndexStart: 0,
-      spcialtyTitle: "擅長於ANDROID原生APP及跨平台FLUTTER開發",
-      spcialtyContent:
-        "\n★ Android Architecture MVVM / Databinding / JetPack / ReactiveX / Java/ Kotlin / UnitTest / Coroutine  \n★ Flutter Architecture GetX \n★ CI/CD Jenkins \n★ Version Control Git \n★ Project Mangement Redmine\n\n",
+      responseibility:
+        "\n主要負責項目: \n配合設計人員開發畫面、評估開發時程、構思並實作額外功能、客製內容開發、製作使用者手冊等。\n\n",
+      spcialtyContent: [
+        {
+          title: "Android開發",
+          content:
+            "Android Architecture MVVM / Databinding / JetPack / ReactiveX / Java / Kotlin / UnitTest / Coroutine",
+        },
+        { title: "Flutter開發", content: "Architecture GetX" },
+        { title: "CI/CD", content: "Jenkins" },
+        { title: "版本控制", content: "Git" },
+        { title: "專案管理", content: "Redmine" },
+      ],
       slogan: "　　/ 享受過程，並穩紮穩打 /",
       principalList: [
         {
@@ -96,16 +130,16 @@ export default {
           company: "承穎科技公司",
           post: "APP ENGINEER",
           content:
-            "● 開發「倉儲管理系統」、「派車系統」、「貨態查詢」應用程式 \n● 客製客戶需求功能\n● 維護現有客戶專案\n\n※服務國內多家知名物流企業。如:宅配通、MOMO、中華郵政等等。以MVVM軟體設計架構進行開發，並主動導入Flutter雙系統平台及提供用戶使用。",
+            "● 開發「倉儲管理系統」、「派車系統」、「貨態查詢」應用程式 \n● 客製客戶需求功能\n● 維護現有客戶專案\n\n※服務國內多家知名物流企業。如:夏暉、宅配通、MOMO和中華郵政等等。以MVVM軟體設計架構進行開發，並主動導入Flutter雙系統平台及提供用戶使用。",
         },
         {
           id: "002",
           startDateTime: "2019/11",
           endDateTime: "2021/02",
           company: "嘉通物聯網科技公司",
-          post: "ANDROID ENGINEER  ",
+          post: "ANDROID ENGINEER",
           content:
-            "● 開發「睡眠檢測」、「空氣品質檢測」應用程式\u000A● BLT藍芽技術串聯APP即時顯示\u000A",
+            "● 開發「睡眠檢測」、「空氣品質檢測」應用程式\n● BLT藍芽技術串聯APP即時顯示\n",
         },
         {
           id: "003",
@@ -114,7 +148,7 @@ export default {
           company: "職業軍人",
           post: "飛機修護人員",
           content:
-            "● 直升機相關零件維護及修復\u000A● 教學新進官兵飛機維修相關內容\u000A",
+            "● 直升機相關零件維護及修復\n● 教學新進官兵飛機維修相關內容\n",
         },
         {
           id: "004",
@@ -122,7 +156,8 @@ export default {
           endDateTime: "2015/08",
           company: "嶺東科技大學",
           post: "畢委會總幹事",
-          content: "● 策畫系會參展事宜  \u000A● 協調它系舉辦日程\u000A",
+          content:
+            "● 策畫系會參展事宜  \n● 協調它系舉辦日程\n\n※曾帶領參與「新一代設計展」、「高雄放肆大賞」和「台中A+設計展」。",
         },
       ],
       worksList: [
