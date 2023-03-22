@@ -27,7 +27,6 @@
 <script>
 import CardWidgetVue from "../../components/CardWidget.vue";
 
-//迷途狗Project
 export default {
   components: { CardWidgetVue },
   data() {
@@ -56,7 +55,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang="scss">
 .more-container {
   margin-top: 20px;
   padding-bottom: 20px;

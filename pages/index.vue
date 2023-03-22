@@ -261,6 +261,24 @@ export default {
         },
         {
           id: "006",
+          type: "APP",
+          title: "AIVB",
+          link: "./project/006",
+          webUrl: "",
+          picPath: "https://i.imgur.com/GuXcmmt.png",
+          description:
+            "非接觸型電子感應偵測睡眠裝置，與以往錶帶不同，主要服務對象為長照相關行業，遠端即可監測老人家上下床狀態，讓家人好安心。",
+          screenshot: [
+            "https://i.imgur.com/6uSibgp.png",
+            "https://i.imgur.com/hCFn3CL.png",
+            "https://i.imgur.com/3Fbj7TW.png",
+            "https://i.imgur.com/qf2MD1t.png",
+            "https://i.imgur.com/8MmWfY4.png",
+            "https://i.imgur.com/AyiCduT.png",
+          ],
+        },
+        {
+          id: "007",
           type: "WEB",
           title: "旺來蓁展蛋捲",
           link: "https://walai.com.tw/",
@@ -270,7 +288,7 @@ export default {
           screenshot: [],
         },
         {
-          id: "007",
+          id: "008",
           type: "WEB",
           link: "https://dynergicsupplyinc.com/",
           title: "鼎耀國際供應鏈有限公司",

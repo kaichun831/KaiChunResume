@@ -27,26 +27,26 @@
 <script>
 import CardWidgetVue from "../../components/CardWidget.vue";
 
+//迷途狗Project
 export default {
   components: { CardWidgetVue },
   data() {
     return {
-      id: "002",
+      id: "006",
       type: "APP",
-      title: "中華郵政",
-      link: "./project/002",
+      title: "AIVB",
+      link: "./project/006",
       webUrl: "",
-      picPath: "https://i.imgur.com/lHDVbB5.png",
+      picPath: "https://i.imgur.com/GuXcmmt.png",
       description:
-        "提供中華郵政內部倉儲作業人員使用，方便處理倉儲相關入庫、出庫、盤點等等功能。",
+        "非接觸型電子感應偵測睡眠裝置，與以往錶帶不同，主要服務對象為長照相關行業。\n遠端即可監測老人家上下床狀態，讓家人好安心。",
       screenshot: [
-        "https://i.imgur.com/YJjVWAI.png",
-        "https://i.imgur.com/r1hZGKN.png",
-        "https://i.imgur.com/6YyXhJ2.png",
-        "https://i.imgur.com/8Hdpd7q.png",
-        "https://i.imgur.com/Hwf6lXk.png",
-        "https://i.imgur.com/6LDqrgr.png",
-        "https://i.imgur.com/NS67mgk.png",
+        "https://i.imgur.com/6uSibgp.png",
+        "https://i.imgur.com/hCFn3CL.png",
+        "https://i.imgur.com/3Fbj7TW.png",
+        "https://i.imgur.com/qf2MD1t.png",
+        "https://i.imgur.com/8MmWfY4.png",
+        "https://i.imgur.com/AyiCduT.png",
       ],
     };
   },
