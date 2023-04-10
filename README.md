@@ -18,7 +18,7 @@ description: 個人履歷介紹
 - App
     - [迷途狗 (Android & iOS)](https://play.google.com/store/apps/details?id=com.dylanwalkha.asuscomm.app.twudingmap&hl=zh-TW)
     - [承穎派車系統 (Android & iOS)](https://apps.apple.com/tw/app/%E6%89%BF%E7%A9%8E%E6%B4%BE%E8%BB%8A%E7%B3%BB%E7%B5%B1/id1622515145)
-    - 承穎貨態系統 (Android & iOS)
+    - [承穎貨態系統 (Android & iOS)](https://apps.apple.com/tw/app/%E6%89%BF%E7%A9%8E%E8%B2%A8%E6%85%8B%E7%B3%BB%E7%B5%B1/id1673628631)
     - 承穎倉儲系統 (Android)
     - 中華郵政倉儲系統 (Android)
 - Web
