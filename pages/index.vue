@@ -71,7 +71,7 @@
           <div class="div-principal-container">
             <scroll-principal-widget-vue
               style="width: 90%"
-              v-for="principal in principalList"
+              v-for="principal in reversedPrincipalList"
               :key="principal['id']"
               :title="principal['post']"
               :startDateTime="principal['startDateTime']"
@@ -87,7 +87,7 @@
         <div>
           <ul>
             <li>/ 客製APP / 網頁建置 / 媒合設計 / 媒合攝影 / 廣告投放 /</li>
-            <li style="font-size: 30px">歡迎洽詢</li>
+            <li style="font-size: 30px">歡迎來信洽詢</li>
             <li>/ 0968-717-579 /</li>
             <li>/ kaichun831@gmail.com /</li>
           </ul>
@@ -117,32 +117,24 @@ export default {
             "Android Architecture MVVM / Databinding / JetPack / ReactiveX / Java / Kotlin / UnitTest / Coroutine",
         },
         { title: "Flutter開發", content: "Architecture GetX" },
-        { title: "CI/CD", content: "Jenkins" },
+        { title: "ReactNative開發", content: "TypeScript" },
+        { title: "CI/CD", content: "Jenkins、GitLab-CI" },
         { title: "版本控制", content: "Git" },
-        { title: "專案管理", content: "Redmine" },
+        { title: "專案管理", content: "Redmine、CickUp" },
       ],
       slogan: "　　/ 享受過程，並穩紮穩打 /",
       principalList: [
-        {
+      {
           id: "001",
-          startDateTime: "2021/03",
-          endDateTime: "NOW",
-          company: "承穎科技公司",
-          post: "APP ENGINEER",
+          startDateTime: "2013/06",
+          endDateTime: "2015/08",
+          company: "嶺東科技大學",
+          post: "畢委會總幹事",
           content:
-            "● 開發「倉儲管理系統」、「派車系統」、「貨態查詢」應用程式 \n● 客製客戶需求功能\n● 維護現有客戶專案\n\n※服務國內多家知名物流企業。如:夏暉、宅配通、MOMO和中華郵政等等。以MVVM軟體設計架構進行開發，並主動導入Flutter雙系統平台及提供用戶使用。",
+            "● 策畫系會參展事宜  \n● 協調它系舉辦日程\n\n※曾帶領參與「新一代設計展」、「高雄放肆大賞」和「台中A+設計展」。",
         },
         {
           id: "002",
-          startDateTime: "2019/11",
-          endDateTime: "2021/02",
-          company: "嘉通物聯網科技公司",
-          post: "ANDROID ENGINEER",
-          content:
-            "● 開發「睡眠檢測」、「空氣品質檢測」應用程式\n● BLT藍芽技術串聯APP即時顯示\n",
-        },
-        {
-          id: "003",
           startDateTime: "2015/07",
           endDateTime: "2019/10",
           company: "職業軍人",
@@ -151,14 +143,35 @@ export default {
             "● 直升機相關零件維護及修復\n● 教學新進官兵飛機維修相關內容\n",
         },
         {
-          id: "004",
-          startDateTime: "2013/06",
-          endDateTime: "2015/08",
-          company: "嶺東科技大學",
-          post: "畢委會總幹事",
+          id: "003",
+          startDateTime: "2019/11",
+          endDateTime: "2021/02",
+          company: "嘉通物聯網科技公司",
+          post: "ANDROID ENGINEER",
           content:
-            "● 策畫系會參展事宜  \n● 協調它系舉辦日程\n\n※曾帶領參與「新一代設計展」、「高雄放肆大賞」和「台中A+設計展」。",
+            "● 開發「睡眠檢測」、「空氣品質檢測」應用程式\n● BLT藍芽技術串聯APP即時顯示\n",
         },
+        {
+          id: "004",
+          startDateTime: "2021/03",
+          endDateTime: "2023/04",
+          company: "承穎科技公司",
+          post: "APP ENGINEER",
+          content:
+            "● 開發「倉儲管理系統」、「派車系統」、「貨態查詢」應用程式 \n● 客製客戶需求功能\n● 維護現有客戶專案\n\n※服務國內多家知名物流企業。如:夏暉、宅配通、MOMO和中華郵政等等。以MVVM軟體設計架構進行開發，並主動導入Flutter雙系統平台及提供用戶使用。",
+        },
+        {
+          id: "005",
+          startDateTime: "2023/05",
+          endDateTime: "NOW",
+          company: "宇立峯科技有限公司",
+          post: "FLUTTER ENGINEER",
+          content:
+            "從0開始打造產品，提供多國業主使用，提供多種APP服務，如：APP開發、APP維護等等。\n\n※擁有多年APP開發經驗，熟悉多種APP開發流程，並且擅長多國語言翻譯。",
+        },
+        
+       
+        
       ],
       worksList: [
         {
@@ -321,6 +334,11 @@ export default {
       }
     },
   },
+  computed:{
+    reversedPrincipalList() {
+      return [...this.principalList].reverse();  // 使用擴展運算符創建副本，避免直接修改原始數據
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
