@@ -164,7 +164,7 @@ export default {
           id: "005",
           startDateTime: "2023/05",
           endDateTime: "NOW",
-          company: "宇立峯科技有限公司",
+          company: "宇利峯有限公司",
           post: "FLUTTER ENGINEER",
           content:
             "從0開始打造產品，提供多國業主使用，提供多種APP服務，如：APP開發、APP維護等等。\n\n※擁有多年APP開發經驗，熟悉多種APP開發流程，並且擅長多國語言翻譯。",

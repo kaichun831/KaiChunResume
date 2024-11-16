@@ -1,6 +1,6 @@
 {
   "name": "KG_Resume",
-  "version": "Main1.0.0+1",
+  "version": "Main1.0.0+2",
   "private": true,
   "scripts": {
     "dev": "nuxt",
