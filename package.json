@@ -20,9 +20,8 @@
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/google-fonts": "^2.0.0",
     "@nuxtjs/style-resources": "^1.2.1",
-    "fibers": "^5.0.3",
+    "sass": "^1.81.0",
     "font-awesome": "^4.7.0",
-    "node-sass": "^8.0.0",
     "sass-loader": "^10.4.1"
   }
 }
